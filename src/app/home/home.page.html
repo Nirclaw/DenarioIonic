@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="end">
+      <ion-button class="newtask" (click)="cli()">+</ion-button>
+    </ion-buttons>
+
+    <ion-title class="title">
+      To do list
+    </ion-title>
+    <ion-button (click)="salir()" fill="clear">logOut</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresg($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card *ngFor="let task of datos" [class.pendiente]="task.desatado === 'pendiente'"
+    [class.progreso]="task.desatado === 'progreso'" [class.terminado]="task.desatado === 'terminado'">
+    <div (click)="vertask(task)">
+      <ion-card-header>
+        <ion-card-title style="font-size: 20px;">{{task.titulo}}</ion-card-title>
+        <ion-card-subtitle>{{task.desatado}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{task.descripcion}}
+        <div style="display: flex; justify-content: space-between; margin: 4px;">
+          <b>Inicio: {{ task.fecha_inicio | date:'dd/MM/yyyy' : 'UTC' }} </b>
+          <b>Fin: {{ task.fecha_vencimiento | date:'dd/MM/yyyy':'UTC' }} </b>
+
+        </div>
+
+      </ion-card-content>
+    </div>
+
+  </ion-card>
+
+
+
+</ion-content>

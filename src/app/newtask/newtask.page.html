@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons style="display: flex; justify-content: space-between; align-items: center;">
+      <ion-button (click)="retornar()">volver</ion-button>
+
+
+      <ion-title style="display: flex;">
+        New task
+      </ion-title>
+      <ion-button (click)="capturar()" [disabled]="formnewtask.invalid">Create</ion-button>
+
+    </ion-buttons>
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formnewtask">
+    <ion-item>
+      <ion-input label="New task" formControlName="titulo" placeholder="task"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea placeholder="Type here descripcion" formControlName="descripcion" [autoGrow]="true" value="">
+      </ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha limite</ion-label>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true" cssClass="custom-modal-date">
+        <ng-template>
+          <ion-datetime formControlName="fecha_vencimiento" presentation="date" locale="es-ES"
+            id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+  </form>
+</ion-content>

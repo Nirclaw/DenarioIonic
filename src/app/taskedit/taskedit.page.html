@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-buttons style="display: flex; justify-content: space-between; align-items: center;">
+    <ion-button (click)="retornar()">volver</ion-button>
+
+
+    <ion-title style="display: flex;">
+      update task
+    </ion-title>
+    <ion-button (click)="detele()">Delete</ion-button>
+
+  </ion-buttons>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formedit">
+
+    <ion-item>
+      <ion-input label="task" formControlName="titulo" placeholder="{{datos.titulo}}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea placeholder="Type here descripcion" [autoGrow]="true" formControlName="descripcion"
+        placeholder="{{datos.descripcion}}">
+      </ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha inicio</ion-label>
+      <ion-datetime-button datetime="datetime" disabled="true"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime" presentation="date" formArrayName="fechainicio"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Fecha Vencimiento</ion-label>
+      <ion-datetime-button datetime="datetime2" disabled="false"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime2" presentation="date" formControlName="fecha_vencimiento"></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Estado" formControlName="estado">
+        <ion-select-option value=3>Pendiente</ion-select-option>
+        <ion-select-option value=1>Progreso</ion-select-option>
+        <ion-select-option value=2>Terminado</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" (click)="actualizar()">Actualizar</ion-button>
+
+  </form>
+</ion-content>
