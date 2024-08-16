@@ -5,6 +5,7 @@
   "homepage": "https://ionicframework.com/",
   "type": "module",
 
+
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
