@@ -68,7 +68,7 @@
 
   - Después de ejecutar los comandos, la aplicación estará disponible en `http://localhost:8100/login`.
 
-  ![](C:\Users\caice\Documents\DenarioIonic\src\img\login.png)
+  ![login.png](https://github.com/Nirclaw/DenarioIonic/blob/main/src/img/login.png?raw=true)
 
   - Credenciales de Prueba:
     - **Juan Pérez:** `juan.perez@example.com`, `password123`
@@ -77,7 +77,7 @@
   - Una vez que hayas iniciado sesión, serás redirigido al home donde podrás ver y gestionar las tareas.
   - 
 
-  ![](C:\Users\caice\Documents\DenarioIonic\src\img\home.png)
+  ![home.png](https://github.com/Nirclaw/DenarioIonic/blob/main/src/img/home.png?raw=true)
 
 
 
@@ -85,14 +85,12 @@
   - Para crear una nueva tarea, haz clic en el botón ubicado en la esquina superior derecha de la pantalla, identificado con un ícono "+".
   - Esto te llevará a la página donde podrás ingresar los detalles de la nueva tarea.
 
-
-
-![](C:\Users\caice\Documents\DenarioIonic\src\img\creartarea.png)
+![creartarea.png](https://github.com/Nirclaw/DenarioIonic/blob/main/src/img/creartarea.png?raw=true)
 
 - Ver Tareas en el Home:
   - Después de crear una tarea, para verla en el home, desliza hacia abajo en la pantalla principal. Esto activará el icono de actualización, y la nueva tarea aparecerá en la lista.
 
-![](C:\Users\caice\Documents\DenarioIonic\src\img\refrescar.png)
+![refrescar.png](https://github.com/Nirclaw/DenarioIonic/blob/main/src/img/refrescar.png?raw=true)
 
 
 
@@ -103,7 +101,7 @@
 
 
 
-![](C:\Users\caice\Documents\DenarioIonic\src\img\actualizar o eliminar.png)
+![actualizar o eliminar.png](https://github.com/Nirclaw/DenarioIonic/blob/main/src/img/actualizar%20o%20eliminar.png?raw=true)
 
 
 
